@@ -1,0 +1,17 @@
+soda_cloud:
+  host: cloud.soda.io
+  api_key_id: ${API_KEY_ID}
+  api_key_secret: ${API_KEY_SECRET}
+data_source customer:
+  type: snowflake
+  connection:
+    username: ${SNOWFLAKE_USERNAME}
+    password: ${SNOWFLAKE_PASSWORD}
+    account: ${SNOWFLAKE_ACCOUNT}
+    database: ${SNOWFLAKE_DATABASE}
+    warehouse: ${SNOWFLAKE_WAREHOUSE}
+    role: ${SNOWFLAKE_ROLE}
+    session_parameters:
+      QUERY_TAG: soda-queries
+      QUOTED_IDENTIFIERS_IGNORE_CASE: false
+  schema: ${SNOWFLAKE_SCHEMA}

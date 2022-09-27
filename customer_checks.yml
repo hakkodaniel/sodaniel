@@ -1,0 +1,8 @@
+checks for customer: 
+  - invalid_count(C_MKTSEGMENT) = 0:
+      valid values: ['AUTOMOBILE', 'BUILDING', 'MACHINERY', 'HOUSEHOLD'] 
+      name: Look for unaccepted values 
+  - duplicate_count(C_NATIONKEY):
+      warn:
+        when > 0
+      name: There are duplicates!
